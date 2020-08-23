@@ -1,5 +1,5 @@
 <?php
-
+include('../../models/entities/Classe.php');
 
 class ClasseDAO extends DAO
 {
@@ -18,6 +18,7 @@ class ClasseDAO extends DAO
 
     public static function create($data)
     {
+        var_dump($data);
         $connection = new PDO('mysql:host=localhost;dbname=online_classes', 'root', '');
         $statement = $connection->prepare('SELECT `student` FROM `t_registrations` WHERE classe = ?');
         $statement->execute($data['pk']);

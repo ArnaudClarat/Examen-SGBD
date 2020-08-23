@@ -17,7 +17,7 @@ abstract class DAO
         try
         {
             $statement = $this->connection->prepare('SELECT * FROM `{$this->table}` WHERE `pk` = ?');
-            $statement->execute($pk);
+            $statement->execute([$pk]);
             return $this->create($statement->fetch(PDO::FETCH_ASSOC));
         } catch (PDOException $e)
         {
