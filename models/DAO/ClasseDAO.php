@@ -7,7 +7,7 @@ class ClasseDAO extends DAO
     protected $properties;
 
     /**
-     * ClasseDAO constructor.
+     * ClasseDAO constructor.   
      */
     public function __construct()
     {

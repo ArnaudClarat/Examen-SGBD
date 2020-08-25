@@ -16,7 +16,7 @@ class Router {
         $this->post = $post;
         $this->controller_list = [''];
         $this->controller_name = false;
-        $this->anonymous_list = ['login', 'CreateUser'];
+        // $this->anonymous_list = ['login', 'CreateUser'];
         $this->controller = false;
         $this->root = $this->parseRoot($self);
         $this->route = $this->parseURL($url);
